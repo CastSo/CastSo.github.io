@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body class="flex-container">
+        <div class="header-section">
+            <div>Git</div>
+                <div>LinkedIn</div>
+        </div>
+        <div class="description-section">
+                
+                <div class= "description-box">
+
+                    <div class="description-txt">
+                        <div class="description-header">Sofia Castro</div>
+                        <div class="description-paragraph">
+                            Backend web developer, game designer
+
+                        </div>
+                        
+                    </div>
+                     <div>
+                        <img src="Newyork-movie-edward-hopper-1939.jpg" alt= "Newyork-movie-edward-hopper-1939" class="description-img">
+                    </div>
+                </div>   
+        </div>
+
+        <div class="projects-info-section">
+            <div class="projects-header">My Projects</div>
+            <div class="projects-container">
+                <div class="projects-section">
+                    <div class="projects-img" onClick=VaRTENDER(); role="button"></div>
+
+                </div>
+                <div class="projects-section">
+                    <div class="projects-img" onClick=studentBazaar(); role="button"></div>
+
+                </div>
+            
+            </div>
+        </div> 
+
+        <div class="preview-section">
+            <div class="preview-box">
+                <img id="preview-image" src="images/rooms-by-the-sea.jpg">
+                <div id="preview-description">Bartending simulation made using VR as the user interface</div>
+            </div>
+        </div>
+    </body>
+<link rel="stylesheet" href="style.css">
+</html>
+<script>
+    function VaRTENDER(){
+    document.getElementById('preview-image')
+    .src="images/rooms-by-the-sea.jpg";
+    document.getElementById('preview-description')
+    .innerHTML="Bartending simulation made using VR as the user interface";
+}
+
+    function studentBazaar(){
+        document.getElementById('preview-image')
+        .src="images/rooms-by-the-sea.jpg";
+        document.getElementById('preview-description')
+        .innerHTML="An ecommerce store dedicated to students.";
+    }
+</script>
