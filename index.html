@@ -5,6 +5,7 @@
         <div class="header-section">
             <p><a href="https://github.com/CastSo"><img class="header-icon" src="images/github.png" alt="github-icon"></a></p>
             <p><a href="https://www.linkedin.com/in/sofia-castro-915579363/"><img class="header-icon" alt="linkedin-icon" src="images/LinkedIn.png"></a></p>
+            <p>Contact me at: scasttr003@gmail.com</p>
         </div>
         <div class="description-section">
                 
@@ -19,24 +20,23 @@
                         </div>
                         <div class="description-paragraph">
                             Backend web developer, game developer, and software engineer
-
                         </div>
                         
                     </div>
-                     <div>
-                        <img src="Newyork-movie-edward-hopper-1939.jpg" alt= "Newyork-movie-edward-hopper-1939" class="description-img"  style="max-width:100%;height:auto;">
-                    </div>
+                   
                 </div>   
         </div>
 
         <div class="projects-info-section">
             <div class="projects-header">My Projects</div>
             <div class="projects-container">
-                <div class="projects-section">
+                <div class="project" onclick="selectProject(this); return false;">
+                    <div class="project-"></div>
                     <img class="projects-img" src="images/vartender.png" onClick=VaRTENDER(); role="button">
+                    <p><a href="https://github.com/Black-Meteorite/VR-Bartending"><img class="header-icon" src="images/github.png" alt="github-icon"></a></p>
                 </div>
-                <div class="projects-section">
-                    <img class="projects-img" src="images/student-bazaar.png" onClick=studentBazaar(); role="button">
+                <div class="project" onclick="selectProject(this); return false;">
+                    <img  class="projects-img" src="images/student-bazaar.png"  onClick=studentBazaar(); role="button">
 
                 </div>
             
@@ -54,10 +54,21 @@
                 </div>
             </div>
         </div>
+
+        <div class="contact-section">
+
+        </div>
     </body>
 <link rel="stylesheet" href="style.css">
 </html>
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+   //Highlights default project
+    const firstProject = document.querySelector('.project');
+    if (firstProject) {
+        selectProject(firstProject);
+    }
+    });
     function VaRTENDER(){
     document.getElementById('preview-image')
     .src="images/vartender-demo.gif";
@@ -76,5 +87,19 @@
         .innerHTML="Node.js, Express.js, MySQL, Javascript"
     }
 
+
+    function selectProject(project) {
+        const projectImg= project.querySelector('.projects-img');
+        if (projectImg)
+        {
+            projectImg.classList.add('selected');
+        }
+        const allProjectImgs = document.querySelectorAll('.projects-img');
+        allProjectImgs.forEach(img => {
+            if (img !== projectImg) {
+                img.classList.remove('selected');
+            }
+        });
+    }
     
 </script>

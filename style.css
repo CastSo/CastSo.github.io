@@ -47,7 +47,7 @@ body {
     column-gap: 20px;
 }
 
-  .header-section a {
+  .header-section p {
     display: flex;
     align-items: center;
     color: #F9FAF8;
@@ -192,9 +192,11 @@ body {
 }
 
 .projects-img {
-  border-radius: 10px;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
   width: 240px;
   height: 160px;
+  border-radius: 10px;
   border: 2px solid white;
   background: var(--vista-blue);
 }
@@ -207,12 +209,21 @@ body {
   padding: 20px;
 }
 
+.projects-img.selected {
+  opacity: 1.0;
+  filter: alpha(opacity=40);
+
+}
+
+
+
 .preview-section {
     display: flex;
     height: max-content;
     justify-items: center;
     align-items: center;
     flex-direction: column;
+    border: 2px solid white;
     max-width:100%;
     height:auto;
     background-color:var(--steel-blue);
