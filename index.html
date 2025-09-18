@@ -19,7 +19,7 @@
                             Sofia Castro
                         </div>
                         <div class="description-paragraph">
-                            Backend web developer, game developer, and software engineer
+                            Software engineer and game developer
                         </div>
                         
                     </div>
@@ -48,10 +48,10 @@
         <div class="preview-section">
             <div class="preview-box">
                 <img id="preview-image" src="images/vartender-demo.gif"  style="max-width:100%;height:auto;">
-                <div id="preview-description">
-                    
-                    <div id="project-description">A VR headset ready bartending simulation.</div>
-                    <div id="project-tools">Unity, C#</div>
+                <div id="preview-info">
+                    <div id="preview-title">VaRtender</div>
+                    <div id="preview-description">A VR headset ready bartending simulation.</div>
+                    <div id="preview-tools">Unity, C#</div>
                     
                 </div>
             </div>
@@ -72,20 +72,24 @@
     }
     });
     function VaRTENDER(){
+    document.getElementById('preview-title')
+    .innerHTML="VRtender"
     document.getElementById('preview-image')
     .src="images/vartender-demo.gif";
-    document.getElementById('project-description')
+    document.getElementById('preview-description')
     .innerHTML="A VR headset ready bartending simulation.";
-    document.getElementById('project-tools')
+    document.getElementById('preview-tools')
     .innerHTML="Unity, C#"
 }
 
     function studentBazaar(){
+        document.getElementById('preview-title')
+        .innerHTML="Student Bazaar"
         document.getElementById('preview-image')
         .src="images/student-bazaar-demo.gif";
-        document.getElementById('project-description')
+        document.getElementById('preview-description')
         .innerHTML="An ecommerce store dedicated to students.";
-        document.getElementById('project-tools')
+        document.getElementById('preview-tools')
         .innerHTML="Node.js, Express.js, MySQL, Javascript"
     }
 
