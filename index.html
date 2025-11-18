@@ -32,6 +32,12 @@
             <div class="projects-container">
                 <div class="project-box">
                     <div class="project" onclick="selectProject(this); return false;">
+                        <img  class="projects-img" src="images/sand_sim.png"  onClick=particleSim(); role="button">
+                    </div>
+                    <a href="https://github.com/CastSo/2D_particle_simulator"><img class="header-icon" src="images/github.png" alt="github-icon"></a>
+                </div>
+                <div class="project-box">
+                    <div class="project" onclick="selectProject(this); return false;">
                         <img class="projects-img" src="images/vartender.png" onClick=VaRTENDER(); role="button">
                     </div>
                     <a href="https://github.com/Black-Meteorite/VR-Bartending"><img class="header-icon" src="images/github.png" alt="github-icon"></a>
@@ -42,20 +48,23 @@
                     </div>
                     <a href="https://github.com/Pure-Code-Solutions/Student_Bazaar"><img class="header-icon" src="images/github.png" alt="github-icon"></a>
                 </div>
+                
             </div>
-        </div> 
 
+        
         <div class="preview-section">
             <div class="preview-box">
-                <img id="preview-image" src="images/vartender-demo.gif"  style="max-width:100%;height:auto;">
+                <img id="preview-image" src=""  style="max-width:800px;height:400px;">
                 <div id="preview-info">
-                    <div id="preview-title">VaRtender</div>
-                    <div id="preview-description">A VR headset ready bartending simulation.</div>
-                    <div id="preview-tools">Unity, C#</div>
+                    <div id="preview-title"></div>
+                    <div id="preview-description"></div>
+                    <div id="preview-tools"></div>
                     
                 </div>
             </div>
         </div>
+
+    </div>
 
         <div class="contact-section">
 
@@ -65,6 +74,8 @@
 </html>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+
+     particleSim();
    //Highlights default project
     const firstProject = document.querySelector('.project');
     if (firstProject) {
@@ -73,13 +84,14 @@
     });
     function VaRTENDER(){
     document.getElementById('preview-title')
-    .innerHTML="VRtender"
+    .innerHTML="VaRtender"
     document.getElementById('preview-image')
     .src="images/vartender-demo.gif";
     document.getElementById('preview-description')
     .innerHTML="A VR headset ready bartending simulation.";
     document.getElementById('preview-tools')
     .innerHTML="Unity, C#"
+    
 }
 
     function studentBazaar(){
@@ -91,6 +103,17 @@
         .innerHTML="An ecommerce store dedicated to students.";
         document.getElementById('preview-tools')
         .innerHTML="Node.js, Express.js, MySQL, Javascript"
+    }
+
+    function particleSim(){
+        document.getElementById('preview-title')
+        .innerHTML="2D Particle Simulation"
+        document.getElementById('preview-image')
+        .src="images/sand_sim.gif";
+        document.getElementById('preview-description')
+        .innerHTML="A simple particle simulator using cellular automaton.";
+        document.getElementById('preview-tools')
+        .innerHTML="OpenGL, C++"
     }
 
 
