@@ -30,6 +30,11 @@
         <div class="projects-info-section">
             <div class="projects-header">My Projects</div>
             <div class="projects-container">
+                 <div class="project-box">
+                    <div class="project" onclick="selectProject(this); return false;">
+                        <img  class="projects-img" src="images/pos_physics_sim.png"  onClick=posPhysicsSim(); role="button">
+                    </div>
+                </div>
                 <div class="project-box">
                     <div class="project" onclick="selectProject(this); return false;">
                         <img  class="projects-img" src="images/sand_sim.png"  onClick=particleSim(); role="button">
@@ -75,7 +80,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
 
-     particleSim();
+     posPhysicsSim()
    //Highlights default project
     const firstProject = document.querySelector('.project');
     if (firstProject) {
@@ -112,6 +117,17 @@
         .src="images/sand_sim.gif";
         document.getElementById('preview-description')
         .innerHTML="A simple particle simulator using cellular automaton.";
+        document.getElementById('preview-tools')
+        .innerHTML="OpenGL, C++"
+    }
+
+    function posPhysicsSim(){
+        document.getElementById('preview-title')
+        .innerHTML="Position Based Physics Simulator (WIP)"
+        document.getElementById('preview-image')
+        .src="images/pos_physics_sim.gif";
+        document.getElementById('preview-description')
+        .innerHTML="A physics engine that lets player specify shape of the rigid body.";
         document.getElementById('preview-tools')
         .innerHTML="OpenGL, C++"
     }
