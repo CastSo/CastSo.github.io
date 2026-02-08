@@ -19,7 +19,7 @@
                             Sofia Castro
                         </div>
                         <div class="description-paragraph">
-                            Software engineer and game developer
+                            Software developer
                         </div>
                         
                     </div>
@@ -30,10 +30,17 @@
         <div class="projects-info-section">
             <div class="projects-header">My Projects</div>
             <div class="projects-container">
+                <div class="project-box">
+                    <div class="project" onclick="selectProject(this); return false;">
+                        <img  class="projects-img" src="images/no_nonsense_preview.png"  onClick=noNonsense(); role="button">
+                    </div>
+                    <a href="https://github.com/CastSo/no_nonsense_engine"><img class="header-icon" src="images/github.png"></a>
+                </div>
                  <div class="project-box">
                     <div class="project" onclick="selectProject(this); return false;">
                         <img  class="projects-img" src="images/pos_physics_sim.png"  onClick=posPhysicsSim(); role="button">
                     </div>
+                    <a href="https://github.com/CastSo/verlet_integration.git"><img class="header-icon" src="images/github.png"></a>
                 </div>
                 <div class="project-box">
                     <div class="project" onclick="selectProject(this); return false;">
@@ -47,12 +54,7 @@
                     </div>
                     <a href="https://github.com/Black-Meteorite/VR-Bartending"><img class="header-icon" src="images/github.png" alt="github-icon"></a>
                 </div>
-                <div class="project-box">
-                    <div class="project" onclick="selectProject(this); return false;">
-                        <img  class="projects-img" src="images/student-bazaar.png"  onClick=studentBazaar(); role="button">
-                    </div>
-                    <a href="https://github.com/Pure-Code-Solutions/Student_Bazaar"><img class="header-icon" src="images/github.png" alt="github-icon"></a>
-                </div>
+
                 
             </div>
 
@@ -80,7 +82,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
 
-     posPhysicsSim()
+    noNonsense()
    //Highlights default project
     const firstProject = document.querySelector('.project');
     if (firstProject) {
@@ -99,16 +101,6 @@
     
 }
 
-    function studentBazaar(){
-        document.getElementById('preview-title')
-        .innerHTML="Student Bazaar"
-        document.getElementById('preview-image')
-        .src="images/student-bazaar-demo.gif";
-        document.getElementById('preview-description')
-        .innerHTML="An ecommerce store dedicated to students.";
-        document.getElementById('preview-tools')
-        .innerHTML="Node.js, Express.js, MySQL, Javascript"
-    }
 
     function particleSim(){
         document.getElementById('preview-title')
@@ -123,14 +115,27 @@
 
     function posPhysicsSim(){
         document.getElementById('preview-title')
-        .innerHTML="Position Based Physics Simulator (WIP)"
+        .innerHTML="Position Based Physics Simulator"
         document.getElementById('preview-image')
         .src="images/pos_physics_sim.gif";
         document.getElementById('preview-description')
-        .innerHTML="A physics engine that lets player specify shape of the rigid body.";
+        .innerHTML="A physics engine that lets the player specify the shape of a rigid body.";
         document.getElementById('preview-tools')
         .innerHTML="OpenGL, C++"
     }
+
+
+    function noNonsense(){
+        document.getElementById('preview-title')
+        .innerHTML="No Nonsense Engine (WIP)"
+        document.getElementById('preview-image')
+        .src="images/no_nonsense.gif";
+        document.getElementById('preview-description')
+        .innerHTML="A CPU-based renderer that imitates the GPU-based graphics api like OpenGL.";
+        document.getElementById('preview-tools')
+        .innerHTML="C"
+    }
+
 
 
     function selectProject(project) {
